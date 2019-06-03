@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cat <<"EOF" > /home/ubuntu/update_ssh_authorized_keys.sh
 #!/usr/bin/env bash
 set -e
