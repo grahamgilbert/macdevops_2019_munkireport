@@ -7,6 +7,7 @@ jobs:
       - image: hashicorp/terraform:0.12.1
     steps:
       - checkout
+      - run: sed -i "s/##TF_VAR_token##/$TF_VAR_token/g" include.tf
       - run:
           name: Validate Terraform Formatting
           command: "[ -z \"$(terraform fmt -write=false)\" ] || { terraform fmt -write=false -diff; exit 1; }"

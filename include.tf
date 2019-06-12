@@ -6,7 +6,7 @@ terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
     organization = "grahamgilbert"
-    token        = "${var.token}"
+    token        = "##TF_VAR_token##"
 
     workspaces {
       name = "macdevops-2019-munkireport"
