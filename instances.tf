@@ -6,7 +6,7 @@ resource "aws_instance" "munkireport_instance" {
   key_name               = "${aws_key_pair.ec2key.key_name}"
   user_data              = "${file("${path.module}/userdata.sh")}"
 
-  tags {
+  tags = {
     Environment = "${var.environment_tag}"
   }
 }

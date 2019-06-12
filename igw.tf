@@ -1,7 +1,7 @@
 resource "aws_internet_gateway" "igw" {
   vpc_id = "${aws_vpc.vpc.id}"
 
-  tags {
+  tags = {
     Environment = "${var.environment_tag}"
   }
 }
@@ -14,7 +14,7 @@ resource "aws_route_table" "rtb_public" {
     gateway_id = "${aws_internet_gateway.igw.id}"
   }
 
-  tags {
+  tags = {
     Environment = "${var.environment_tag}"
   }
 }
