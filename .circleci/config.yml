@@ -4,7 +4,7 @@ version: 2
 jobs:
   validate_terraform:
     docker:
-      - image: hashicorp/terraform
+      - image: hashicorp/terraform:0.12.1
     steps:
       - checkout
       - run:
@@ -22,7 +22,7 @@ jobs:
 
   deploy:
     docker:
-      - image: hashicorp/terraform
+      - image: hashicorp/terraform:0.12.1
     steps:
       - checkout
       - run:
