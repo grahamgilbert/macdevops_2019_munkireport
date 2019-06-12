@@ -17,7 +17,7 @@ resource "aws_security_group" "sg_22" {
   }
 
   tags {
-    "Environment" = "${var.environment_tag}"
+    Environment = "${var.environment_tag}"
   }
 }
 
@@ -40,7 +40,7 @@ resource "aws_security_group" "sg_80" {
   }
 
   tags {
-    "Environment" = "${var.environment_tag}"
+    Environment = "${var.environment_tag}"
   }
 }
 
@@ -63,6 +63,6 @@ resource "aws_security_group" "sg_443" {
   }
 
   tags {
-    "Environment" = "${var.environment_tag}"
+    Environment = "${var.environment_tag}"
   }
 }

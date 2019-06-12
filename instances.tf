@@ -7,6 +7,6 @@ resource "aws_instance" "munkireport_instance" {
   user_data              = "${file("${path.module}/userdata.sh")}"
 
   tags {
-    "Environment" = "${var.environment_tag}"
+    Environment = "${var.environment_tag}"
   }
 }
