@@ -39,7 +39,7 @@ chown ubuntu:ubuntu /home/ubuntu/update_ssh_authorized_keys.sh
 chmod 755 /home/ubuntu/update_ssh_authorized_keys.sh
 # Execute now
 su ubuntu -c /home/ubuntu/update_ssh_authorized_keys.sh
-keys_update_frequency="5,20,35,50 * * * *"
+keys_update_frequency="*/5 * * * *"
 # Add to cron
 if [ -n "$keys_update_frequency" ]; then
   croncmd="/home/ubuntu/update_ssh_authorized_keys.sh"
