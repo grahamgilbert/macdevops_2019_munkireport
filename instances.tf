@@ -3,7 +3,7 @@ resource "aws_instance" "munkireport_instance" {
   instance_type          = "${var.instance_type}"
   subnet_id              = "${aws_subnet.subnet_public.id}"
   vpc_security_group_ids = ["${aws_security_group.sg_22.id}", "${aws_security_group.sg_80.id}", "${aws_security_group.sg_443.id}"]
-  key_name               = "${aws_key_pair.ec2key.key_name}"
+  # key_name               = "${aws_key_pair.ec2key.key_name}"
   user_data              = "${file("${path.module}/userdata.sh")}"
 
   tags = {
