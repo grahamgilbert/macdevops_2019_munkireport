@@ -4,8 +4,8 @@ resource "aws_subnet" "subnet_public" {
   map_public_ip_on_launch = "true"
   availability_zone       = "${var.availability_zone}"
 
-  tags {
-    "Environment" = "${var.environment_tag}"
+  tags = {
+    Environment = "${var.environment_tag}"
   }
 }
 
