@@ -26,6 +26,7 @@ jobs:
       - image: hashicorp/terraform:0.12.1
     steps:
       - checkout
+      - run: sed -i "s/##TF_VAR_token##/$TF_VAR_token/g" include.tf
       - run:
           name: Initialize Terraform
           command: terraform init
