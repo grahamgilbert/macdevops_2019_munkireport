@@ -32,3 +32,7 @@ variable "environment_tag" {
   description = "Environment tag"
   default     = "Production"
 }
+
+variable "token" {
+  description = "Terraform Enterprise API token"
+}
